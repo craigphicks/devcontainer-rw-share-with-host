@@ -11,7 +11,7 @@ This explains how to enable the `devcountiner`-created container and the host bo
 3 - Then, the development directores and files permission flags are set. 
 
 
-**1 Dockerfile**
+**1 Devcontainer config**
 
    Add this line to `.devcountainer/Dockerfile`:
    ```
@@ -23,6 +23,44 @@ This explains how to enable the `devcountiner`-created container and the host bo
    ARG VARIANT=20-bullseye
    FROM mcr.microsoft.com/devcontainers/javascript-node:0-${VARIANT}
    RUN su node -c "echo 'umask 0002' >> /home/node/.bashrc"
+   ```
+
+   This is a working `devcontainer.json`
+   ```
+   {
+      "name": "Node.js & TypeScript",
+      "build": {
+         "dockerfile": "Dockerfile"
+      },
+      "features": {
+         // This git update cause a few minutes extra in rebuild, but even without it
+         // we are getting version 2.40.0 which has the git vuln fixes
+         // "ghcr.io/devcontainers/features/git:1": {
+         //     "version": "latest",
+         //     "ppa": "false"
+         // }
+      },
+
+      // Configure tool-specific properties.
+      "customizations": {
+         // Configure properties specific to VS Code.
+         "vscode": {
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+               "dbaeumer.vscode-eslint"
+            ]
+         }
+      },
+
+      // Use 'forwardPorts' to make a list of ports inside the container available locally.
+      // "forwardPorts": [],
+
+      // Use 'postCreateCommand' to run commands after the container is created.
+      // "postCreateCommand": "yarn install",
+
+      // Set `remoteUser` to `root` to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+      "remoteUser": "node"
+   }
    ```
 
 **2 Add group on host** 

@@ -5,7 +5,7 @@
 	},
 	"features": {
         // This git update cause a few minutes extra in rebuild, but even without it
-        // we are getting version 2.40.0 which has the vuln fixes
+        // we are getting version 2.40.0 which has the git vuln fixes
 		// "ghcr.io/devcontainers/features/git:1": {
         //     "version": "latest",
         //     "ppa": "false"
