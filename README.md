@@ -53,5 +53,8 @@ devcontainer build .
 devcontainer open .
 ```
 
+**References**
+
+[github, docker-rw-share-with-host](https://github.com/craigphicks/docker-rw-share-with-host)
 
 
