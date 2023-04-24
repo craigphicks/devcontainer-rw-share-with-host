@@ -93,6 +93,8 @@ devcontainer open .
 
 **References**
 
-[github, docker-rw-share-with-host](https://github.com/craigphicks/docker-rw-share-with-host)
+[github repo: docker-rw-share-with-host](https://github.com/craigphicks/docker-rw-share-with-host)
 
+[devcontainers provided example devcontainer.json file](https://github.com/devcontainers/images/blob/main/src/typescript-node/.devcontainer/devcontainer.json)
 
+[devcontainers provided example Dockerfile file](https://github.com/devcontainers/images/blob/main/src/typescript-node/.devcontainer/Dockerfile)
