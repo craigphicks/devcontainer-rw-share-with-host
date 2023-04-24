@@ -46,5 +46,12 @@ sudo find . -type d -exec chmod g+rwxs {} +
 sudo find . -type f -exec chmod g+rw {} +
 ```
 
+**4 Build and run the container in vscode**
+
+```
+devcontainer build .
+devcontainer open .
+```
+
 
 
