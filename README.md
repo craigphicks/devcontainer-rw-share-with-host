@@ -2,7 +2,7 @@
 
 **Summary**
 
-This explains how to enable the `devcountiner`-created container and the host both be able to write the same mounted directory.
+Setup files and other instructions enabling a `devcountiner`-created constainer and host to both have read+write permissions on the mounted directory.
 
 1 - In the container configuration, the Dockerfile is modified so the group write permission flags will be set on write.
 
